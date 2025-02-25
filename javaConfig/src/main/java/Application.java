@@ -14,5 +14,6 @@ public class Application {
         System.out.println(service2);
 
         System.out.println(service.findAll().get(0).getFirstName());
+        System.out.println(service.findAll().get(0).getSeedNum());
     }
 }
