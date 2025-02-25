@@ -6,7 +6,7 @@ public class Application {
     public static void main(String[] args) {
         //SpeakerService service = new SpeakerServiceImpl();
         ApplicationContext appContext = new AnnotationConfigApplicationContext(AppConfig.class);
-
+        //test scope
         SpeakerService service = appContext.getBean("speakerService", SpeakerService.class);
         System.out.println(service);
 
