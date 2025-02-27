@@ -3,8 +3,13 @@ package com.ea.SpringBasic.pages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
+import org.springframework.stereotype.Component;
 
+@Component
 public class HomePage {
+    public HomePage() {
+        System.out.println("In home page");
+    }
     @FindBy(how = How.LINK_TEXT, using = "Login")
     public WebElement linkLogin;
 

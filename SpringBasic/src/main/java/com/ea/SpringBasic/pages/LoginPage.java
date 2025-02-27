@@ -1,10 +1,16 @@
 package com.ea.SpringBasic.pages;
 
+import org.apache.commons.logging.Log;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
+import org.springframework.stereotype.Component;
 
+@Component
 public class LoginPage {
+    public LoginPage() {
+        System.out.println("In login page");
+    }
     @FindBy(how= How.NAME, using = "UserName")
     public WebElement txtUserName;
     @FindBy(how= How.NAME, using = "Password")
