@@ -4,7 +4,9 @@ import com.ea.SpringBasic.pages.HomePage;
 import com.ea.SpringBasic.pages.LoginPage;
 import com.ea.SpringBasic.pages.MainPage;
 import org.junit.jupiter.api.Test;
+import org.springframework.boot.SpringApplication;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.context.ApplicationContext;
 
 @SpringBootTest
 class SpringBasicApplicationTests {
