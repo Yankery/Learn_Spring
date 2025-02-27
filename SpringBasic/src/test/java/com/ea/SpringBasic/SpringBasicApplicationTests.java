@@ -9,19 +9,21 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.Profile;
+
+import java.util.List;
 
 @SpringBootTest
 class SpringBasicApplicationTests {
 
-	@Value("testing")
-	private String environment;
-
+	@Value("${app.url}")
+	private String appUrl;
+	@Value("chrome, firefox, edge")
+	private List<String> browsers;
 	@Autowired
 	private MainPage mainPage;
 	@Test
-	void contextLoads() {
-		System.out.println(environment);
-		//constructor injection
+	void performLoginTest() {
 		mainPage.performLogin();
 	}
 
